@@ -4,7 +4,7 @@ export async function GET(request: NextRequest) {
   // Creating a URL instance from the request.url
   try{
 
-  const url = new URL(request.url);
+  const url = request.nextUrl;
 
   // Accessing query parameters
   const page = url.searchParams.get('page');
